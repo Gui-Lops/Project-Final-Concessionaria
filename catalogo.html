@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Aeternus</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="menu-icon-box">
+            <div class="menu-icon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        
+        <div class="logo-container">
+            
+            <div class="logo">
+                <h1>aeternus</h1>
+            </div>
+
+        </div>
+
+        <div class="box">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#produtos">Carros</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section id="home" class="home">
+            <div class="home-conteudo">
+                <div class="home-titulo">
+                    <h1 class="back-title">catálogo</h1>
+                </div>
+                <div class="ground">
+                    <div class="grey-part"></div>
+                </div>
+                <div class="home-img">
+                    <img src="/img/BMW.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="produtos" class="produtos">
+        <div class="formulario">
+            <form action="https://www.google.com/search" method="get">
+                <input class="src-input" type="text" name="q" placeholder="Qual tipo de carro você procura">
+                <button class="src-button">Pesquisar</button>
+            </form>
+        </div>
+        <div class="catalogo-cards">
+            <div class="produto-card">
+                <div class="img-card">
+                    <img src="/img/civic g10.jpg" alt="">
+                </div>
+                <div class="descricao">
+                    <h1>titulo</h1>
+                    <p>descricao</p>
+                </div>
+                <div class="ano">
+                    <p>__/__/__</p>
+                </div>
+            </div>
+            <div class="produto-card">
+                <div class="img-card">
+                    <img src="/img/civic g10.jpg" alt="">
+                </div>
+                <div class="descricao">
+                    <h1>titulo</h1>
+                    <p>descricao</p>
+                </div>
+                <div class="ano">
+                    <p>__/__/__</p>
+                </div>
+            </div>
+            <div class="produto-card">
+                <div class="img-card">
+                    <img src="/img/civic g10.jpg" alt="">
+                </div>
+                <div class="descricao">
+                    <h1>titulo</h1>
+                    <p>descricao</p>
+                </div>
+                <div class="ano">
+                    <p>__/__/__</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <footer id="sobre">
+            <div class="divisao1">
+                    <div class="logoFooter">
+                        <h1>aeternus</h1>
+                    </div>
+                    <div class="footerIcons">
+                        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                        <li><a href=""><i class='bx bxl-whatsapp'></i></a></li>
+                        <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                    </div>
+            </div>
+            <div class="divisao2">
+                <div class="sobreTitle">
+                    <h1>Sobre nós</h1>
+                </div>
+                <div class="sobre">
+                    <li><a href="">Rua Serra de Japi</a></li>
+                    <li><a href="">Carros ate cinco anos</a></li>
+                    <li><a href="">Desde 1978</a></li>
+                </div>
+            </div>
+            <div class="divisao3">
+                <div class="sobreTitle">
+                    <h1>Marcas parceiras</h1>
+                </div>
+                <div class="sobre">
+                    <li><a href="">Toyota Motor Corporation</a></li>
+                    <li><a href="">Honda Motor Company</a></li>
+                    <li><a href="">Bayerische Motoren Werke (BMW)</a></li>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+                        let menu_icon_box = document.querySelector(".menu-icon-box");
+            let box = document.querySelector(".box");
+                    
+            menu_icon_box.onclick = function(){
+                menu_icon_box.classList.toggle("active");
+                box.classList.toggle("active")
+            }
+        </script>
+</body>
+</html>

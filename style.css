@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+:root {
+    --logo-font: "Orbitron";
+    --principal-font: "Montserrat";
+    --title-font: "Bebas Neue";
+    --main-color: black;
+    --secondary-color: white;
+}
+
+/*Inicio da sidebar*/
+
+.container {
+    width: 100%;
+    height: 100vh;
+    font-family: var(--principal-font);
+    position: relative;
+    /* border: springgreen solid; */
+}
+
+.box {
+    width: fit-content;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    text-align: left;
+    opacity: 0;
+    left: -500px;
+    pointer-events: none;
+    transition: 0.5s;
+    position: fixed;
+    box-shadow: 0px 0px 20px #4c4c4c50;
+    z-index: 1;
+    transition: left 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.active.box {
+    opacity: 1;
+    left: 0px;
+    pointer-events: fill;
+}
+
+.menu-icon-box {
+    width: fit-content;
+    height: auto;
+    /* background-color: var(--secondary-color); */
+    margin: 10px 50px;
+    position: absolute;
+    position: fixed;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.menu-icon {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.menu-icon:hover {
+    background-color: #5c5c5c40;
+}
+
+.active .menu-icon {
+    transform: translate(240px, 9px);
+    background-color: #5c5c5c40;
+}
+
+.line1 , .line2 , .line3 {
+    width: 20px;
+    height: 2px;
+    margin: 5px 8px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    transition: 1.2s;
+}
+
+.active .line1 {
+    transform: translate(0px , 7.3px)rotate(45deg);
+    background-color: var(--secondary-color);
+}
+
+.active .line2 {
+    transform: translate(0px, 6px);
+   opacity: 0;
+   transition: none;
+   background-color: var(--secondary-color);
+}
+
+.active .line3 {
+    transform: translate(0px , -7.3px)rotate(-45deg);
+    background-color: var(--secondary-color);
+}
+
+nav {
+    padding-top: 100px;
+}
+
+nav ul {
+    margin: 0px 50px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+nav ul li:hover {
+    background-color: #dcdcdc;
+    border-radius: 8px;
+    /* text-decoration: underline; */
+    transition: 1.3s;
+}
+
+nav ul li a {
+    color: var(--main-color);
+    font-size: 28px;
+    padding: 10px 30px;
+    display: block;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.logo-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--logo-font);
+}
+
+.logo {
+    position: absolute;
+    position: fixed;
+    margin: 15px;
+    font-size: small;
+    color: var(--secondary-color);
+    -webkit-text-stroke: 1px #000;
+    z-index: 2;
+}
+
+/*Fim da sidebar*/
+
+/*Elementos da home*/
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+section div.background-section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.box2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: justify;
+    flex-wrap: wrap;
+    /* border: solid black; */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) , rgb(0, 0, 0));
+}
+
+.conteudo {
+    margin-right: 4%;
+    width: 48%;
+    color: var(--secondary-color);
+    font-family: Bebas Neue;
+    /* border: solid black; */
+}
+
+.titulo-slogan {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.slogan {
+    font-family: 'Space Grotesk';
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.button-catalogo {
+    height: 40px;
+    width: fit-content;
+    padding: 25px 35px;
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--secondary-color);
+    border: solid var(--secondary-color) ;
+    transition: 0.5s;
+}
+
+.button-catalogo:hover {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+/*Fim dos elementos da home*/
+
+
+/* inicio das categorias */
+
+.categorias {
+    width: 100%;
+    height: 70vh;
+    background-color: var(--secondary-color);
+    /* border: solid black; */
+  }
+  
+  .categoria-Section {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+    /* border: solid red; */
+  }
+  
+  .categoria-Content {
+    font-family: var(--principal-font);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    padding: 40px 0px;
+    /* border: solid green; */
+  }
+  
+  .card-categoria {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    display: flex;
+    /* align-items: flex-end; */
+    /* flex-wrap: wrap;  */
+    box-shadow: 0px 10px 7px #3c3c3c60;
+    overflow: hidden;
+    /* border: orange solid; */
+  }
+  
+  
+  .card-categoria img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    /* border: yellow solid; */
+    
+  }
+  
+  .tituloDocard-categoria {
+    padding-top:75%;
+    padding-left:5% ;
+    color: white;
+    /* border: violet solid; */
+  }
+  
+  .tituloDocard-categoria h2 {
+    position: relative;
+    font-size: 2rem;
+    font-family: var(--title-font);
+  }
+
+  /* fim da categoria */
+
+/*Cards*/
+
+.destaques {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    /* border: solid black; */
+}
+
+.tituloDaSection {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+    /* border: solid red; */
+}
+
+.cardContent {
+    font-family: var(--principal-font);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    padding: 40px 0px;
+    /* border: solid green; */
+}
+
+.card {
+    width: 320px;
+    height: 360px;
+    border-radius: 10px;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-wrap: wrap;
+    box-shadow: 0px 10px 7px #3c3c3c60;
+    overflow: hidden;
+    /* border: orange solid; */
+}
+
+.card .text {
+    padding: 0px 10px;
+    width: 100%;
+    height: 50%;
+    /* flex-wrap: wrap; */
+    /* border: blue solid; */
+}
+
+.card .text p {
+    width: 100%;
+}
+
+.card .cardImg {
+    width: 100%;
+    /* border: chartreuse solid; */
+}
+
+.card img {
+    max-width: 100%;
+    /* border: yellow solid; */
+}
+
+.tituloDoCard {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    /* border: violet solid; */
+}
+
+.tituloDoCard h2 {
+    font-size: 1.2rem;
+    font-family: var(--title-font);
+}
+
+.cardText {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 25px;
+    /* border: crimson solid; */
+}
+
+/*Fim dos cards*/
+
+/* inicio dos lançamento */
+.lancamentos{
+    width: 100%;
+    height: 90vh;
+    background-color: #2E2D2D;
+    /* border: yellow solid; */
+    
+  }
+  
+  .conteiner-lancamentos{
+    display: flex;
+  }
+  
+  .coluna-lance-1{
+    width: 55%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    /* border: blue solid; */
+    
+  }
+  
+  .text-lance{
+    color: var(--secondary-color);
+    margin: 5px;
+    padding: 10px;
+    width: 90%;
+    height: 75%;
+    /* border: red solid; */
+  }
+  
+  .text-lance h1{
+    font-family: var(--title-font);
+    font-size: 60px;
+    font-weight: 300;
+  }
+  
+  .text-lance p{
+    font-family: var(--principal-font);
+    font-size: 23px;
+    margin:20px 0px ;
+  }
+  
+  .btn-lancamento{
+    color: var(--secondary-color);
+    border-radius: 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top:10px;
+    padding: 15px 30px;
+    border: 1px solid var(--secondary-color);
+    transition: 400ms;
+  
+  
+  }
+  
+  .btn-lancamento:hover{
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+  }
+  
+  .coluna-lance-2{
+    width: 45%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: blueviolet solid; */
+  }
+  .coluna-lance-2 img{
+    width: 85%;
+    height: 80%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px var(--secondary-color);
+  
+  }
+
+/* fim dos lançamentos */
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-color: #2c2c2c;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.divisao1 {
+    width: 33%;
+    height: 100%;
+    color: var(--secondary-color);
+    font-family: var(--logo-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    /* border: violet solid; */
+}
+
+.logoFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    /* border: wheat solid; */
+}
+
+.footerIcons {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 2.2rem;
+    /* border: aqua solid; */
+}
+
+.footerIcons a {
+    text-decoration: none;
+}
+
+.bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.bxl-instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+
+.bxl-facebook {
+    background-color: #4267b3;
+}
+
+.bxl-whatsapp {
+    background-color: #25d366;
+}
+
+.bx:hover {
+    scale: 1.1;
+}
+
+.divisao2 {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    /* border: yellowgreen solid; */
+}
+
+.sobreTitle {
+    font-family: var(--logo-font);
+}
+
+.sobre {
+    width: 100%;
+    height: 50%;
+    gap: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    /* border: #7f37c9 solid; */
+}
+
+.sobre a{
+    color: var(--secondary-color);
+    font-family: var(--principal-font);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;  
+}
+
+.divisao3 {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    /* border: red solid; */
+}
+
+.box {
+    transition: left 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-icon-box {
+    transition: transform 0.3s ease-in-out;
+}

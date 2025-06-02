@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+:root {
+  --logo-font: "Orbitron";
+  --principal-font: "Montserrat";
+  --title-font: "Bebas Neue";
+  --main-color: black;
+  --secondary-color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.categorias {
+  width: 100%;
+  height: 70vh;
+  background-color: var(--secondary-color);
+  border: solid black;
+}
+
+.categoria-Section {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+  /* border: solid red; */
+}
+
+.categoria-Content {
+  font-family: var(--principal-font);
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  padding: 40px 0px;
+  /* border: solid green; */
+}
+
+.card-categoria {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  /* align-items: flex-end; */
+  /* flex-wrap: wrap;  */
+  box-shadow: 0px 10px 7px #3c3c3c60;
+  overflow: hidden;
+  /* border: orange solid; */
+}
+
+
+.card-categoria img {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  /* border: yellow solid; */
+  
+}
+
+.tituloDocard-categoria {
+  padding-top:75%;
+  padding-left:5% ;
+  color: white;
+  /* border: violet solid; */
+}
+
+.tituloDocard-categoria h2 {
+  position: relative;
+  font-size: 2rem;
+  font-family: var(--title-font);
+}
+
+/*section dos lançamentos*/
+
+.lancamentos{
+  width: 100%;
+  height: 90vh;
+  background-color: #2E2D2D;
+  /* border: yellow solid; */
+  
+}
+
+.conteiner-lancamentos{
+  display: flex;
+}
+
+.coluna-lance-1{
+  width: 55%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: blue solid;
+  
+}
+
+.text-lance{
+  color: var(--secondary-color);
+  margin: 5px;
+  padding: 10px;
+  width: 90%;
+  height: 75%;
+  border: red solid;
+}
+
+.text-lance h1{
+  font-family: var(--title-font);
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.text-lance p{
+  font-family: var(--principal-font);
+  font-size: 23px;
+  margin:20px 0px ;
+}
+
+.btn-lancamento{
+  color: var(--secondary-color);
+  border-radius: 12px;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top:10px;
+  padding: 15px 30px;
+  border: 1px solid var(--secondary-color);
+  transition: 400ms;
+
+
+}
+
+.btn-lancamento:hover{
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+}
+
+.coluna-lance-2{
+  width: 45%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: blueviolet solid;
+}
+.coluna-lance-2 img{
+  width: 85%;
+  height: 80%;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+
+}
